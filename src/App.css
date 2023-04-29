@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -28,13 +30,31 @@ html, body{
   z-index: 1;
   top: 0;
   left: 0;
-  width: 300px;
+  width: 350px;
   font-size: 1.5rem;
   padding: 1.2rem;
   color: white;
   font-weight: 500;
-  background-color: rgba(138, 43, 226, 0.5);
-  margin: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: 'Poppins', sans-serif;
+  transition: background-color ease-in-out 0.2s;
+}
+
+.material-icons{
+  opacity: 0;
+  margin-left: -30px;
+  transition: opacity, margin-left ease-out 0.2s;
+
+}
+
+.homepage-text:hover{
+  background-color: rgba(0,0,0, 0.8)
+}
+
+.homepage-text:hover >.material-icons{
+  /* background-color: rgba(138, 43, 226, 0.8); */
+  opacity: 1;
+  margin-left: 0;
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
