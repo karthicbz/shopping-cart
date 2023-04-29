@@ -23,11 +23,14 @@ function Home() {
         const carousalImages = importImages(require.context('../images/carousal_images/'), false, '.jpg');
         setImages(carousalImages);
 
-        return ()=>clearInterval(timer);
+        return ()=>{
+            clearInterval(timer);
+        }
     }, [index])
 
     return (
         <div className="home">
+            <p className='homepage-text'>Krystal-Camera shop - All kinds of camera / Sony / Canon / Leica / Hasselblad / Red / Best Offers!</p>
             <img className="image-carousel" src={images[index]} alt='camera'/>
         </div>
     );
