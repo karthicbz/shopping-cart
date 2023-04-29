@@ -28,7 +28,7 @@ function Home() {
     return (
         <div className="home">
             <Navigation />
-            <p className='homepage-text'><span className='material-icons'>home</span> Krystal-Camera shop - All kinds of camera / Sony / Canon / Leica / Hasselblad / Red / Best Offers!</p>
+            <p className='homepage-text'><span className='material-icons home-icon'>home</span> Krystal-Camera shop - All kinds of camera / Sony / Canon / Leica / Hasselblad / Red / Best Offers!</p>
             <img className="image-carousel" src={images[index]} alt='camera'/>
         </div>
     );
