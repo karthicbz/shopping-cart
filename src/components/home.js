@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
-// import image1 from '../images/carousal_images/camera1.jpg'
-// import image2 from '../images/carousal_images/camera2.jpg'
-
-// import ImageSlider from 'image-slider-react';
+import Navigation from './navigation';
 
 function Home() {
     const [index, setIndex] = useState(0);
@@ -30,6 +27,7 @@ function Home() {
 
     return (
         <div className="home">
+            <Navigation />
             <p className='homepage-text'><span className='material-icons'>home</span> Krystal-Camera shop - All kinds of camera / Sony / Canon / Leica / Hasselblad / Red / Best Offers!</p>
             <img className="image-carousel" src={images[index]} alt='camera'/>
         </div>
