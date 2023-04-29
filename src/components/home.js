@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import SideTag from './sideTag';
 
 function Home() {
     const [index, setIndex] = useState(0);
@@ -26,7 +27,7 @@ function Home() {
 
     return (
         <div className="home">
-            <p className='homepage-text'><span className='material-icons home-icon'>home</span> Krystal-Camera shop - All kinds of camera / Sony / Canon / Leica / Hasselblad / Red / Best Offers!</p>
+            <SideTag />
             <img className="image-carousel" src={images[index]} alt='camera'/>
         </div>
     );

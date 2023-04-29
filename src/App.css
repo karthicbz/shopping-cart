@@ -40,7 +40,7 @@ html, body{
   transition: background-color ease-in-out 0.2s;
 }
 
-.material-icons{
+.home-icon{
   opacity: 0;
   margin-left: -30px;
   transition: opacity, margin-left ease-out 0.2s;
@@ -51,10 +51,85 @@ html, body{
   background-color: rgba(0,0,0, 0.8)
 }
 
-.homepage-text:hover >.material-icons{
+.homepage-text:hover >.home-icon{
   /* background-color: rgba(138, 43, 226, 0.8); */
   opacity: 1;
   margin-left: 0;
+}
+
+.navigation{
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navigation-button{
+  height: min-content;
+}
+
+.navigation-options{
+  list-style: none;
+  width: 200px;
+  background-color: rgba(0,0,0, 0.8);
+  color: white;
+  font-size: 1.5rem;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  margin-right: -200px;
+  transition: margin-right ease-in-out 0.5s;
+}
+
+.navigation-options>li{
+  padding: 10px 0 10px 10px;
+}
+
+.navigation-options>li:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.show-navigationOptions{
+  margin-right: 0px;
+}
+
+.menu-icon{
+  color: black;
+  font-size: 2.5rem;
+  margin-top: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color ease-in-out 0.2s;
+}
+
+.menu-icon:hover{
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  cursor: pointer;
+}
+
+.shop-products{
+  width: 700px;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+.products{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  /* background-color: rgb(227, 227, 238); */
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.product-image{
+  width: 200px;
+  margin-right: auto;
+}
+
+.product-details{
+  width: 450px;
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */

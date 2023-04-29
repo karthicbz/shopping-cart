@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -35,7 +36,6 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/user-event": "^14.4.3",
-    "image-slider-react": "^1.0.6"
+    "@testing-library/user-event": "^14.4.3"
   }
 }
