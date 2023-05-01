@@ -1,4 +1,4 @@
-import ProductData from '../data';
+import ProductData from '../datas/data';
 import SideTag from './sideTag';
 import { useState } from 'react';
 
