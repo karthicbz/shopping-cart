@@ -14,6 +14,7 @@ const Shop=()=>{
                         <div className='product-details'>
                         <p className='product-name'>{product.product_name}</p>
                         <p className='product-price'>{product.product_price}</p>
+                        <button className='add-to-cart'>Add to cart</button>
                         </div>
                     </div>
                 )

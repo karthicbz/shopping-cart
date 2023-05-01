@@ -135,6 +135,29 @@ html, body{
 
 .product-details{
   width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.add-to-cart{
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: rgb(158, 240, 240);
+  color: black;
+  box-shadow: 1px 1px 2px 0.8px rgb(197, 196, 196);
+  width: max-content;
+}
+
+.add-to-cart:hover{
+  cursor: pointer;
+}
+
+.add-to-cart:active{
+  transform: scale(0.9);
+  background-color: rgb(6, 174, 174);
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
