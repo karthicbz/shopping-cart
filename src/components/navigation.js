@@ -13,7 +13,7 @@ const NavigationOptions=({cartCount})=>{
 
 const Navigation = ()=>{
 
-    const [itemCount, setItemCount] = useState(0);
+    // const [itemCount, setItemCount] = useState(0);
 
     function handleClick(){
         document.querySelector('.navigation-options').classList.toggle('show-navigationOptions');
@@ -23,7 +23,7 @@ const Navigation = ()=>{
     return(
         <div className="navigation">
             <p className="navigation-button" onClick={handleClick}><span className="material-icons menu-icon">menu</span></p>
-            <NavigationOptions cartCount={itemCount}/>
+            <NavigationOptions cartCount={0}/>
         </div>
     )
 }

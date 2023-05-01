@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import SideTag from './sideTag';
+import Navigation from './navigation';
 
 function Home() {
     const [index, setIndex] = useState(0);
@@ -27,6 +27,7 @@ function Home() {
 
     return (
         <div className="home">
+            <Navigation />
             <img className="image-carousel" src={images[index]} alt='camera'/>
         </div>
     );

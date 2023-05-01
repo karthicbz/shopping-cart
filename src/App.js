@@ -10,7 +10,6 @@ function App() {
   return (
     <BrowserRouter>
       <SideTag />
-      <Navigation />
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/shop" element={<Shop />}/>
