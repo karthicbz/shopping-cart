@@ -1,22 +1,22 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CartCountContext } from "../App";
 import calculateTotal from "../scripts/calculateTotal";
 
-const Cart = ()=>{
-    const cartDetails = useContext(CartCountContext);
+const Cart = ({onClick, items})=>{
+    // const cartDetails = useContext(CartCountContext);
 
     return(
         <div className="cart-products">
-            {cartDetails.length === 0 ? <p className="empty-text">Cart is Empty!</p>:
-            cartDetails.map(details=>{
+            {items.length === 0 ? <p className="empty-text">Cart is Empty!</p>:
+            items.map(details=>{
                 return(
                     <div className="products">
                         <img src={details.product_image} alt="camera"/>
                         <div>
                             <p className="cart-productname">{details.product_name}</p>
                             <p className="cart-productprice">{details.product_price}</p>
-                            <div>
-                                <button>+</button>
+                            <div className="quantity">
+                                <button onClick={onClick} data-prod={details.product_name}>+</button>
                                 <p>{details.quantity}</p>
                                 <button>-</button>
                             </div>
@@ -24,7 +24,7 @@ const Cart = ()=>{
                     </div>
                 )
             })}
-            <p>Total: {'₹ '+calculateTotal(cartDetails)}</p>
+            <p>Total: {'₹ '+calculateTotal(items)}</p>
             <button className="checkout">Checkout</button>
         </div>
     );

@@ -16,7 +16,7 @@ function App() {
 
   function handleClick(e){
 
-    handleSnackbar();
+    // handleSnackbar();
 
     const product = ProductData.data.filter(product=>{
       if(product.product_name === e.target.dataset.prod){
@@ -29,19 +29,26 @@ function App() {
         [...cartItems, {product_name:product[0].product_name, product_image:product[0].product_image, quantity:1, product_price: product[0].product_price}]
       );
     }else{
-      // console.log(isItemFound(e));
+      // console.log(e);
       const isFound = isItemFound(e);
       if(isFound.found === false){
         setCartItems(
           [...cartItems, {product_name:product[0].product_name, product_image:product[0].product_image, quantity:1, product_price: product[0].product_price}]
         );
       }else{
-          cartItems.map(item=>{
-            if(item.product_name === e.target.dataset.prod){
-              item.quantity += 1;
-              item.product_price = '₹ '+parseInt(product[0].product_price.replace('₹ ', ''))*item.quantity;
-            }
-          })
+          // cartItems.map(item=>{
+          //   if(item.product_name === e.target.dataset.prod){
+          //     item.quantity += 1;
+          //     item.product_price = '₹ '+parseInt(product[0].product_price.replace('₹ ', ''))*item.quantity;
+          //   }
+          // })
+          console.log(isFound.index);
+          setCartItems(
+            [...cartItems.slice(0, isFound.index), 
+              {product_name:product[0].product_name, product_image:product[0].product_image, quantity:cartItems[isFound.index].quantity+1, product_price: product[0].product_price},
+              ...cartItems.slice(isFound.index + 1)
+            ]
+          )
       }
     }
 
@@ -72,7 +79,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/shop" element={<Shop onClick={handleClick}/>}/>
-          <Route path="/cart" element={<Cart />}/>
+          <Route path="/cart" element={<Cart onClick={handleClick} items={cartItems}/>}/>
         </Routes>
       </CartCountContext.Provider>
     </BrowserRouter>

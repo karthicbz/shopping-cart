@@ -180,6 +180,11 @@ html, body{
   opacity: 1;
 }
 
+.quantity{
+  display: flex;
+  gap: 5px;
+}
+
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
   .image-carousel{
     left: 50%;
