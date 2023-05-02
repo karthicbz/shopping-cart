@@ -8,7 +8,7 @@ import SideTag from "./components/sideTag";
 import { createContext, useState, useEffect } from "react";
 import ProductData from './datas/data';
 
-export const CartCountContext = createContext(0);
+export const CartCountContext = createContext(null);
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -36,6 +36,7 @@ function App() {
           cartItems.map(item=>{
             if(item.product_name === e.target.dataset.prod){
               item.quantity += 1;
+              item.product_price = '₹ '+parseInt(product[0].product_price.replace('₹ ', '').replace(',',''))*item.quantity;
             }
           })
       }
