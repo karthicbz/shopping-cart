@@ -160,6 +160,26 @@ html, body{
   background-color: rgb(6, 174, 174);
 }
 
+.snack-bar{
+  display: flex;
+  gap: 10px;
+  background-color: rgb(111, 182, 111);
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  opacity: 0;
+  transition: opacity ease-in-out 0.3s;
+}
+
+.snack-bar-para{
+  padding: 10px;
+}
+
+.show-snack-bar{
+  opacity: 1;
+}
+
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
   .image-carousel{
     left: 50%;

@@ -1,5 +1,6 @@
 import ProductData from '../datas/data';
 import { useState } from 'react';
+import SnackBar from './snackBar';
 
 const Shop=({onClick})=>{
     const [productsData, setProductsData] = useState(ProductData.data);
@@ -7,6 +8,7 @@ const Shop=({onClick})=>{
     return(
         <>
         <div className='shop-products'>
+            <SnackBar />
             {productsData.map(product=>{
                 return(
                     <div className='products' key={product.product_name}>

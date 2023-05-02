@@ -7,6 +7,7 @@ import Cart from "./components/cart";
 import SideTag from "./components/sideTag";
 import { createContext, useState, useEffect } from "react";
 import ProductData from './datas/data';
+import handleSnackbar from "./scripts/handleSnackbar";
 
 export const CartCountContext = createContext(null);
 
@@ -15,6 +16,8 @@ function App() {
 
   function handleClick(e){
 
+    handleSnackbar();
+    
     const product = ProductData.data.filter(product=>{
       if(product.product_name === e.target.dataset.prod){
         return product;
