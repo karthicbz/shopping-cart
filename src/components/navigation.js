@@ -26,7 +26,7 @@ const Navigation = ()=>{
     return(
         <div className="navigation">
             <p className="navigation-button" onClick={handleClick}><span className="material-icons menu-icon">menu</span></p>
-            <NavigationOptions cartCount={cartItemCount}/>
+            <NavigationOptions cartCount={cartItemCount.length}/>
         </div>
     )
 }

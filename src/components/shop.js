@@ -14,7 +14,7 @@ const Shop=({onClick})=>{
                         <div className='product-details'>
                             <p className='product-name'>{product.product_name}</p>
                             <p className='product-price'>{product.product_price}</p>
-                            <button className='add-to-cart' onClick={onClick}>Add to cart</button>
+                            <button className='add-to-cart' onClick={onClick} data-prod={product.product_name}>Add to cart</button>
                         </div>
                     </div>
                 )
