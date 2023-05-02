@@ -16,7 +16,9 @@ function App() {
 
   function handleClick(e){
 
-    // handleSnackbar();
+    if(!e.target.classList.contains('cart-add-quantity')){
+      handleSnackbar();
+    }
 
     const product = ProductData.data.filter(product=>{
       if(product.product_name === e.target.dataset.prod){

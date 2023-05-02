@@ -16,7 +16,9 @@ const Cart = ({onClick, items})=>{
                             <p className="cart-productname">{details.product_name}</p>
                             <p className="cart-productprice">{details.product_price}</p>
                             <div className="quantity">
-                                <button onClick={onClick} data-prod={details.product_name}>+</button>
+                                <button 
+                                onClick={onClick} data-prod={details.product_name}
+                                className="cart-add-quantity">+</button>
                                 <p>{details.quantity}</p>
                                 <button>-</button>
                             </div>
