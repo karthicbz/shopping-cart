@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { CartCountContext } from "../App";
+import calculateTotal from "../scripts/calculateTotal";
 
 const Cart = ()=>{
     const cartDetails = useContext(CartCountContext);
 
     return(
         <div className="cart-products">
-            {cartDetails.map(details=>{
+            {cartDetails.length === 0 ? <p className="empty-text">Cart is Empty!</p>:
+            cartDetails.map(details=>{
                 return(
                     <div className="products">
                         <img src={details.product_image} alt="camera"/>
@@ -22,6 +24,7 @@ const Cart = ()=>{
                     </div>
                 )
             })}
+            <p>Total: {'₹ '+calculateTotal(cartDetails)}</p>
             <button className="checkout">Checkout</button>
         </div>
     );
