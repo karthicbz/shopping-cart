@@ -17,7 +17,7 @@ function App() {
   function handleClick(e){
 
     handleSnackbar();
-    
+
     const product = ProductData.data.filter(product=>{
       if(product.product_name === e.target.dataset.prod){
         return product;
@@ -39,7 +39,7 @@ function App() {
           cartItems.map(item=>{
             if(item.product_name === e.target.dataset.prod){
               item.quantity += 1;
-              item.product_price = '₹ '+parseInt(product[0].product_price.replace('₹ ', '').replace(',',''))*item.quantity;
+              item.product_price = '₹ '+parseInt(product[0].product_price.replace('₹ ', ''))*item.quantity;
             }
           })
       }
