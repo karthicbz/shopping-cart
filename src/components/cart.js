@@ -19,8 +19,10 @@ const Cart = ({onClick, items})=>{
                                 <button 
                                 onClick={onClick} data-prod={details.product_name}
                                 className="cart-add-quantity">+</button>
-                                <p>{details.quantity}</p>
-                                <button>-</button>
+                                <p className="quantity-value">{details.quantity}</p>
+                                <button
+                                onClick={onClick} data-prod={details.product_name}
+                                className="cart-minus-quantity">-</button>
                             </div>
                         </div>
                     </div>

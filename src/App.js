@@ -16,7 +16,7 @@ function App() {
 
   function handleClick(e){
 
-    if(!e.target.classList.contains('cart-add-quantity')){
+    if(!e.target.classList.contains('cart-add-quantity') && !e.target.classList.contains('cart-minus-quantity')){
       handleSnackbar();
     }
 
@@ -37,26 +37,43 @@ function App() {
         setCartItems(
           [...cartItems, {product_name:product[0].product_name, product_image:product[0].product_image, quantity:1, product_price: product[0].product_price}]
         );
-      }else{
+      }
+      else{
           console.log(isFound.index);
           setCartItems(
             [...cartItems.slice(0, isFound.index), 
-              {product_name:product[0].product_name, 
+              (e.target.className !== 'cart-minus-quantity')?{product_name:product[0].product_name, 
                 product_image:product[0].product_image, 
                 quantity:cartItems[isFound.index].quantity+1, 
                 product_price: '₹ '+(parseInt(product[0].product_price.replace('₹ ', ''))*(cartItems[isFound.index].quantity+1)),
+              }:{
+                product_name:product[0].product_name, 
+                product_image:product[0].product_image, 
+                quantity:cartItems[isFound.index].quantity-1, 
+                product_price: '₹ '+(parseInt(product[0].product_price.replace('₹ ', ''))*(cartItems[isFound.index].quantity-1))
               },
               ...cartItems.slice(isFound.index + 1)
             ]
           )
+        }
       }
-    }
-
   }
 
   useEffect(()=>{
     console.log(cartItems);
-  }, [cartItems]);
+    const quantity = document.querySelectorAll('.quantity-value');
+    // if(quantity !== null){
+    //   if(quantity.textContent === '0'){
+    //     setCartItems([...cartItems].filter(item => item.quantity !== 0))
+    //   }
+    // }
+    quantity.forEach(item=>{
+      if(item.textContent === '0'){
+        setCartItems([...cartItems].filter(cartItem => cartItem.quantity !== 0))
+      }
+    })
+    // setCartItems([...cartItems].filter(item => item.quantity !== 0))
+  },[cartItems]);
 
   const isItemFound = (e)=>{
     const status = {found:false, index:0};
