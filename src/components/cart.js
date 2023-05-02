@@ -10,7 +10,7 @@ const Cart = ({onClick, items})=>{
             {items.length === 0 ? <p className="empty-text">Cart is Empty!</p>:
             items.map(details=>{
                 return(
-                    <div className="products">
+                    <div className="products" key={details.product_image}>
                         <img src={details.product_image} alt="camera"/>
                         <div>
                             <p className="cart-productname">{details.product_name}</p>

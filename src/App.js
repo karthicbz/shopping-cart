@@ -36,16 +36,14 @@ function App() {
           [...cartItems, {product_name:product[0].product_name, product_image:product[0].product_image, quantity:1, product_price: product[0].product_price}]
         );
       }else{
-          // cartItems.map(item=>{
-          //   if(item.product_name === e.target.dataset.prod){
-          //     item.quantity += 1;
-          //     item.product_price = '₹ '+parseInt(product[0].product_price.replace('₹ ', ''))*item.quantity;
-          //   }
-          // })
           console.log(isFound.index);
           setCartItems(
             [...cartItems.slice(0, isFound.index), 
-              {product_name:product[0].product_name, product_image:product[0].product_image, quantity:cartItems[isFound.index].quantity+1, product_price: product[0].product_price},
+              {product_name:product[0].product_name, 
+                product_image:product[0].product_image, 
+                quantity:cartItems[isFound.index].quantity+1, 
+                product_price: '₹ '+(parseInt(product[0].product_price.replace('₹ ', ''))*(cartItems[isFound.index].quantity+1)),
+              },
               ...cartItems.slice(isFound.index + 1)
             ]
           )
