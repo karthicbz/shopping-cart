@@ -194,6 +194,10 @@ html, body{
 
 .empty-text{
   font-size: 3rem;
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .empty-cart-icon{
