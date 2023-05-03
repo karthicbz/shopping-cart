@@ -122,18 +122,19 @@ html, body{
   /* background-color: rgb(227, 227, 238); */
   margin-bottom: 8px;
   font-family: 'Poppins', sans-serif;
+  gap: 8px;
 }
 
 .products:hover{
   cursor: pointer;
 }
 
-.product-image{
+.product-image, .cart-productImage{
   width: 200px;
   margin-right: auto;
 }
 
-.product-details{
+.product-details, .cart-productDetails{
   width: 450px;
   display: flex;
   flex-direction: column;
@@ -210,6 +211,10 @@ html, body{
   margin-bottom: 1rem;
 }
 
+.cart-add-quantity, .cart-minus-quantity{
+  padding: 2px 5px;
+}
+
 .checkout{
   font-size: 1.5rem;
   padding: 10px 40px;
@@ -232,6 +237,15 @@ html, body{
   right: 0;
   text-align: center;
   padding: 1rem;
+}
+
+.cart-products-section{
+  height: calc(100vh - 144px);
+  overflow: hidden;
+}
+
+.cart-products-section:hover{
+  overflow-y: scroll;
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */

@@ -12,11 +12,12 @@ const Cart = ({onClick, items})=>{
                 <span className="material-icons empty-cart-icon">shopping_cart</span>
                 Cart is Empty!
             </p>:
-            items.map(details=>{
+            <div className="cart-products-section">{ //This div helps to not show scrollbar when cart is empty
+                items.map(details=>{
                 return(
                     <div className="products" key={details.product_image}>
-                        <img src={details.product_image} alt="camera"/>
-                        <div>
+                        <img className="cart-productImage" src={details.product_image} alt="camera"/>
+                        <div className="cart-productDetails">
                             <p className="cart-productname">{details.product_name}</p>
                             <p className="cart-productprice">{details.product_price}</p>
                             <div className="quantity">
@@ -32,6 +33,8 @@ const Cart = ({onClick, items})=>{
                     </div>
                 )
             })}
+            </div>
+            }
             <div className="checkout-section">
                 <p className="cart-total">Total: {'₹ '+calculateTotal(items)}</p>
                 <button className="checkout">Checkout</button>
