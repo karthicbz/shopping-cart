@@ -27,6 +27,7 @@ function Home() {
 
     return (
         <div className="home">
+            <button className='home-shop-button'>Shop</button>
             <img className="image-carousel" src={images[index]} alt='camera'/>
         </div>
     );
