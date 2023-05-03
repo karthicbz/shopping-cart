@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Navigation from './navigation';
+import { Link } from 'react-router-dom';
 
 function Home() {
     const [index, setIndex] = useState(0);
@@ -27,7 +28,7 @@ function Home() {
 
     return (
         <div className="home">
-            <button className='home-shop-button'>Shop</button>
+            <Link to={"/shop"}><button className='home-shop-button'>Shop</button></Link>
             <img className="image-carousel" src={images[index]} alt='camera'/>
         </div>
     );

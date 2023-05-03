@@ -45,6 +45,15 @@ html, body{
   font-family: 'Bebas Neue', cursive;
 }
 
+.home-shop-button:hover{
+  cursor: pointer;
+}
+
+.home-shop-button:active{
+  background-color: rgba(148, 97, 2, 0.5);
+  transform: scale(0.95);
+}
+
 .homepage-text{
   position: fixed;
   z-index: 1;
@@ -94,7 +103,7 @@ html, body{
   list-style: none;
   width: 200px;
   background-color: rgba(0,0,0, 0.8);
-  color: white;
+  /* color: white; */
   font-size: 1.5rem;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
@@ -104,6 +113,10 @@ html, body{
 
 .navigation-options>li{
   padding: 10px 0 10px 10px;
+}
+
+.navigation-options>li>a{
+  color: white;
 }
 
 .navigation-options>li:hover{
