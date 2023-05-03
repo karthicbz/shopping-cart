@@ -1,6 +1,6 @@
 import Home from "./components/home";
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/navigation";
 import Shop from "./components/shop";
 import Cart from "./components/cart";
@@ -89,7 +89,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <CartCountContext.Provider value={cartItems}>
         <SideTag />
         <Navigation />
@@ -100,7 +100,7 @@ function App() {
           <Route path="/order-completed" element={<OrderProcessing />}/>
         </Routes>
       </CartCountContext.Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
