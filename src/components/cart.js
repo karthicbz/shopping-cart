@@ -1,6 +1,5 @@
-import { useContext, useEffect } from "react";
-import { CartCountContext } from "../App";
 import calculateTotal from "../scripts/calculateTotal";
+import { Link } from "react-router-dom";
 
 const Cart = ({onClick, items})=>{
     // const cartDetails = useContext(CartCountContext);
@@ -37,7 +36,7 @@ const Cart = ({onClick, items})=>{
             }
             <div className="checkout-section">
                 <p className="cart-total">Total: {'₹ '+calculateTotal(items)}</p>
-                <button className="checkout">Checkout</button>
+                <Link to={"/order-completed"}><button className="checkout" onClick={onClick} data-prod={null}>Checkout</button></Link>
             </div>
         </div>
     );

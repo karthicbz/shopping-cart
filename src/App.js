@@ -8,6 +8,7 @@ import SideTag from "./components/sideTag";
 import { createContext, useState, useEffect } from "react";
 import ProductData from './datas/data';
 import handleSnackbar from "./scripts/handleSnackbar";
+import OrderProcessing from "./components/orderProcessing";
 
 export const CartCountContext = createContext(null);
 
@@ -16,7 +17,11 @@ function App() {
 
   function handleClick(e){
 
-    if(!e.target.classList.contains('cart-add-quantity') && !e.target.classList.contains('cart-minus-quantity')){
+    if(e.target.textContent === 'Checkout'){
+      setCartItems([]);
+    }else{
+
+    if(!e.target.classList.contains('cart-add-quantity') && !e.target.classList.contains('cart-minus-quantity') && !e.target.classList.contains('checkout')){
       handleSnackbar();
     }
 
@@ -57,10 +62,11 @@ function App() {
           )
         }
       }
+    }
   }
 
   useEffect(()=>{
-    console.log(cartItems);
+    console.log(cartItems); //check quantity if it becomes 0 remove the element
     const quantity = document.querySelectorAll('.quantity-value');
     quantity.forEach(item=>{
       if(item.textContent === '0'){
@@ -91,6 +97,7 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/shop" element={<Shop onClick={handleClick}/>}/>
           <Route path="/cart" element={<Cart onClick={handleClick} items={cartItems}/>}/>
+          <Route path="/order-completed" element={<OrderProcessing />}/>
         </Routes>
       </CartCountContext.Provider>
     </BrowserRouter>
