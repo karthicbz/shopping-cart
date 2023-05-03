@@ -36,6 +36,8 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/user-event": "^14.4.3"
+    "@react-hook/window-size": "^3.1.1",
+    "@testing-library/user-event": "^14.4.3",
+    "react-confetti": "^6.1.0"
   }
 }

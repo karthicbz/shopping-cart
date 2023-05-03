@@ -257,6 +257,10 @@ html, body{
   box-shadow: 1px 1px 10px 1px rgb(204, 162, 71);
 }
 
+.checkout:hover{
+  cursor: pointer;
+}
+
 .checkout:active{
   transform: scale(0.9);
   background-color: rgb(153, 71, 41);
@@ -280,6 +284,46 @@ html, body{
 .cart-products-section:hover{
   overflow-y: scroll;
 }
+
+/* .order-processing-section{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: bisque;
+} */
+
+.order-completed-message{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: bisque;
+  font-family: 'Poppins', sans-serif;
+}
+
+.order-completed-message>p:nth-child(1){
+  font-size: 3rem;
+}
+
+.order-completed-message>p:nth-child(2){
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.order-to-home{
+  padding: 10px;
+  font-size: 1.5rem;
+  border: none;
+  background-color: #8cf7d3;
+  box-shadow: 1px 1px 10px #af987e;
+  cursor: pointer;
+}
+
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
   .image-carousel{
