@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.ffa418ac.css",
+    "main.js": "/shopping-cart/static/js/main.9bec3b55.js",
+    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/camera1.jpg": "/shopping-cart/static/media/camera1.6bf33cea03abaa3512be.jpg",
+    "static/media/camera3.jpg": "/shopping-cart/static/media/camera3.5eca8d67f3eebe0a3108.jpg",
+    "static/media/camera5.jpg": "/shopping-cart/static/media/camera5.1bbe6fbe92cde8d67494.jpg",
+    "static/media/camera2.jpg": "/shopping-cart/static/media/camera2.5441417a3ec0e86ad384.jpg",
+    "static/media/camera4.jpg": "/shopping-cart/static/media/camera4.f2b03286be4e836b94e0.jpg",
+    "static/media/leica_camera2.jpg": "/shopping-cart/static/media/leica_camera2.678c8b8f84d362b746ee.jpg",
+    "static/media/sony_camera3.jpg": "/shopping-cart/static/media/sony_camera3.e4b103472818667d9a52.jpg",
+    "static/media/sony_alpha2.jpg": "/shopping-cart/static/media/sony_alpha2.3a92f9d9f37cf5466dff.jpg",
+    "static/media/canon_camera.jpg": "/shopping-cart/static/media/canon_camera.bb7dfcd38678e714cb3f.jpg",
+    "static/media/sony_alpha.jpg": "/shopping-cart/static/media/sony_alpha.83991e9a6ea907c75c99.jpg",
+    "static/media/canon_camera2.jpg": "/shopping-cart/static/media/canon_camera2.5a8e50a2d528d3000748.jpg",
+    "static/media/nikon_camera1.jpg": "/shopping-cart/static/media/nikon_camera1.da7c6be101bf8d427bba.jpg",
+    "static/media/Leica_camera1.jpg": "/shopping-cart/static/media/Leica_camera1.6ddc65e35bd20e0c32f6.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.ffa418ac.css.map": "/shopping-cart/static/css/main.ffa418ac.css.map",
+    "main.9bec3b55.js.map": "/shopping-cart/static/js/main.9bec3b55.js.map",
+    "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ffa418ac.css",
+    "static/js/main.9bec3b55.js"
+  ]
+}
