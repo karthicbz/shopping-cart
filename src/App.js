@@ -62,17 +62,11 @@ function App() {
   useEffect(()=>{
     console.log(cartItems);
     const quantity = document.querySelectorAll('.quantity-value');
-    // if(quantity !== null){
-    //   if(quantity.textContent === '0'){
-    //     setCartItems([...cartItems].filter(item => item.quantity !== 0))
-    //   }
-    // }
     quantity.forEach(item=>{
       if(item.textContent === '0'){
         setCartItems([...cartItems].filter(cartItem => cartItem.quantity !== 0))
       }
     })
-    // setCartItems([...cartItems].filter(item => item.quantity !== 0))
   },[cartItems]);
 
   const isItemFound = (e)=>{

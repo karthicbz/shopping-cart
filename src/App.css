@@ -185,6 +185,51 @@ html, body{
   gap: 5px;
 }
 
+.cart-products{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.empty-text{
+  font-size: 3rem;
+}
+
+.empty-cart-icon{
+  font-size: 3rem;
+}
+
+.cart-total{
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.checkout{
+  font-size: 1.5rem;
+  padding: 10px 40px;
+  border: none;
+  background-color: rgb(236, 107, 60);
+  color: white;
+  box-shadow: 1px 1px 10px 1px rgb(204, 162, 71);
+}
+
+.checkout:active{
+  transform: scale(0.9);
+  background-color: rgb(153, 71, 41);
+}
+
+.checkout-section{
+  background-color: rgb(226, 179, 92);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 1rem;
+}
+
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
   .image-carousel{
     left: 50%;

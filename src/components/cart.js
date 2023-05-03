@@ -7,7 +7,11 @@ const Cart = ({onClick, items})=>{
 
     return(
         <div className="cart-products">
-            {items.length === 0 ? <p className="empty-text">Cart is Empty!</p>:
+            {items.length === 0 ? 
+            <p className="empty-text">
+                <span className="material-icons empty-cart-icon">shopping_cart</span>
+                Cart is Empty!
+            </p>:
             items.map(details=>{
                 return(
                     <div className="products" key={details.product_image}>
@@ -28,8 +32,10 @@ const Cart = ({onClick, items})=>{
                     </div>
                 )
             })}
-            <p>Total: {'₹ '+calculateTotal(items)}</p>
-            <button className="checkout">Checkout</button>
+            <div className="checkout-section">
+                <p className="cart-total">Total: {'₹ '+calculateTotal(items)}</p>
+                <button className="checkout">Checkout</button>
+            </div>
         </div>
     );
 }
