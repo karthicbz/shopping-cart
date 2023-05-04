@@ -387,7 +387,7 @@ html, body{
   }
 
   .home-shop-button{
-    translate: 10vw 35vh;
+    translate: 6.5vw 35vh;
     padding: 6rem;
   }
 
@@ -425,6 +425,10 @@ html, body{
   }
 
   .order-completed-message>p:nth-child(1){
+    text-align: center;
+  }
+
+  .order-completed-message>p:nth-child(2){
     text-align: center;
   }
 
