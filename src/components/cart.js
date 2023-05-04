@@ -36,7 +36,7 @@ const Cart = ({onClick, items})=>{
             }
             <div className="checkout-section">
                 <p className="cart-total">Total: {'₹ '+calculateTotal(items)}</p>
-                <Link to={"/order-completed"}><button className="checkout" onClick={onClick} data-prod={null}>Checkout</button></Link>
+                {items.length === 0?<></>:<Link to={"/order-completed"}><button className="checkout" onClick={onClick} data-prod={null}>Checkout</button></Link>}
             </div>
         </div>
     );
