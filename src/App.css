@@ -333,10 +333,6 @@ html, body{
 }
 
 @media screen and (max-width: 412px){
-  .homepage-text{
-    width: 300px;
-    padding: 1rem;
-  }
 
   .navigation{
     z-index: 2;
@@ -373,6 +369,59 @@ html, body{
 
   .order-completed-message{
     width: 412px;
+  }
+
+  .order-completed-message>p:nth-child(1){
+    text-align: center;
+  }
+
+  .homepage-text{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 390px){
+
+  .navigation{
+    z-index: 2;
+  }
+
+  .home-shop-button{
+    translate: 10vw 35vh;
+    padding: 6rem;
+  }
+
+  .snack-bar{
+    width: max-content;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: fixed;
+    right: 0;
+    left: 0;
+  }
+
+  .product-image{
+    width: 165px;
+    /* height: 100px; */
+  }
+
+  .shop-products{
+    margin: 0 auto;
+    padding-top: 5rem;
+    width: 390px;
+  }
+
+  .shop-products>.products:nth-child(1){
+    margin-top: 3rem;
+  }
+
+  .cart-products-section{
+    width: 390px;
+    margin-top: 1.5rem;
+  }
+
+  .order-completed-message{
+    width: 390px;
   }
 
   .order-completed-message>p:nth-child(1){
